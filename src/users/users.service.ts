@@ -11,7 +11,6 @@ export class UsersService {
 
     createUser(user: CreateUserDTO) {
         const newUser = this.userRepository.create(user)
-        console.log('registro realizado')
         return this.userRepository.save(newUser)
     }
 }
