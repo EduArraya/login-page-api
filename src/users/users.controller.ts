@@ -18,7 +18,7 @@ export class UsersController {
                 message: `Bienvenido ${newUser.username}`
             })
         }else{
-            throw new BadRequestException('Se requiere ingresar un usuario y contraseña');
+            throw new BadRequestException('Bad Request', { cause: new Error(), description: 'Se requiere ingresar un usuario y contraseña'})
         }
     }   
 }
